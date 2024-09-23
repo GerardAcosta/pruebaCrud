@@ -1,0 +1,15 @@
+<!-- <ul>
+    <li *ngFor="let song of arrSongs()" [routerLink]="['/songs', song._id]">
+        {{song.title}}
+    </li>
+</ul> -->
+
+<div class="songs">
+    <div class="song" *ngFor="let song of arrSongs()">
+        <h3>{{song.title}}</h3>
+        <p>Album: {{song.album}}</p>
+        <p>Artista: {{song.artist}}</p>
+        <div class="btn btn-info" [routerLink]="['/songs', song._id]">Detalle</div>
+        <div class="btn btn-danger ms-2" (click)="onClickBorrar(song._id)">Borrar</div>
+    </div>
+</div>
